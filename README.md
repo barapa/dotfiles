@@ -1,5 +1,26 @@
 # holman does dotfiles
 
+## syncing with original
+Add upstream (done once):
+
+```sh
+git remote add upstream https://github.com/holman/dotfiles
+```
+
+Sync upstream
+```sh
+git fetch upstream
+git checkout master # checkout local master
+git merge upstream/master
+```
+
+## adding submodules
+```sh
+git submodule add git@github.com:ngm/prezto.git
+```
+Can sync with upstream for submodules as well.
+
+## intro
 Your dotfiles are how you personalize your system. These are mine.
 
 I was a little tired of having long alias files and everything strewn about
