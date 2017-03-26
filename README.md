@@ -16,9 +16,16 @@ git merge upstream/master
 
 ## adding submodules
 ```sh
-git submodule add git@github.com:ngm/prezto.git
+git submodule add git@github.com:barapa/prezto.git
 ```
 Can sync with upstream for submodules as well.
+
+For zpresto specifically, we want to also get its recursive submodules. So we can do:
+```sh
+git submodule add https://github.com/barapa/prezto.git zpresto
+cd zpresto
+git submodule update --init --recursive
+```
 
 ## intro
 Your dotfiles are how you personalize your system. These are mine.
