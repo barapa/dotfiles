@@ -1,5 +1,4 @@
 eval "$(pyenv init -)"
-eval "$(_PIPENV_COMPLETE=source pipenv)"
-export PIPENV_SHELL_COMPAT
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 
